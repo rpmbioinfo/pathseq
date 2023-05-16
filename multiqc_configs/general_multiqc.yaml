@@ -1,0 +1,33 @@
+report_header_info:
+  - Contact E-mail: "adam.nicolas.pelletier@rpmbioinfo-solutions.com"
+  - Application Type: "Path-seq"
+
+fn_clean_trim:
+  - ".fastq.gz"
+  - "_report.txt"
+  - "_star"
+  - ".kreport"
+
+extra_fn_clean_exts:
+  - type: regex
+    pattern: "_val_*"
+  - type: regex
+    pattern: "^raw_"
+
+module_order:
+  - fastqc:
+      name: "FastQC (raw)"
+      anchor: "fastqc_raw"
+      info: "This section of the report shows FastQC before adapter trimming."
+      path_filters:
+        - "raw*_fastqc.zip"
+  - cutadapt
+  - fastqc:
+      name: "FastQC (trimmed)"
+      anchor: "fastqc_trimmed"
+      info: "This section of the report shows FastQC results after adapter trimming."
+      target: ""
+      path_filters:
+        - "*_val_*_fastqc.zip"
+  - star
+  - kraken

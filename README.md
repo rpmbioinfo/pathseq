@@ -1,4 +1,8 @@
+
+
 # Path-seq
+![rpmbioinfo/pathseq log](docs/images/rpm_en_logo_lowres.jpg)
+
 ## Sequencing pipeline
 Contains scripts for Non-host alignment on RNA-Seq data
 
@@ -39,6 +43,9 @@ This is dependent on a specific setup installed either on your local machine or 
 
 ## Workflow
 The pipeline accepts either a local directory or S3 URI as input, where paired-ended fastq files are stored. 
+
+![rpmbioinfo/pathseq workflow map](docs/images/flowchart.png)
+
 
 1. **OPTIONAL** By default  the pipeline will attempt to trim adapters with Trimgalore: it will try to find the appropriate adapter automatically, unless adapters are specified on the command line with the associated parameters, but this can be turned off. 
 2. Reads , either raw or trimmed, will be mapped to a reference genome using STAR
