@@ -1,7 +1,8 @@
 
 
 # Path-seq
-![rpmbioinfo/pathseq log](docs/images/rpm_en_logo_lowres.jpg)
+<img src="docs/images/rpm_en_logo_lowres.jpg" alt="RPM Bioinfo Solutions" width = "368" height = "245" title = "RPM Bioinfo Solutions Logo">
+
 
 ## Sequencing pipeline
 Contains scripts for Non-host alignment on RNA-Seq data
