@@ -1,17 +1,15 @@
 
-
-# Path-seq
 <img src="docs/images/rpm_en_logo_lowres.jpg" alt="RPM Bioinfo Solutions" width = "368" height = "245" title = "RPM Bioinfo Solutions Logo">
 
+# Path-seq
 
 ## Sequencing pipeline
 Contains scripts for Non-host alignment on RNA-Seq data
 
 <!-- badges: start -->
-![GitHub last commit](https://img.shields.io/github/last-commit/rpmbioinfo/pathseq/main)
 [![Nextflow](https://img.shields.io/badge/nextflow%20DSL2-%E2%89%A522.10.1-23aa62.svg)](https://www.nextflow.io/)
 [![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
-[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.7942423-1073c8?labelColor=000000)](https://doi.org/10.5281/zenodo.7942423)
+[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.7942547-1073c8?labelColor=000000)](https://doi.org/10.5281/zenodo.7942547)
 
 <!-- badges: end -->
 
@@ -45,7 +43,7 @@ This is dependent on a specific setup installed either on your local machine or 
 ## Workflow
 The pipeline accepts either a local directory or S3 URI as input, where paired-ended fastq files are stored. 
 
-![rpmbioinfo/pathseq workflow map](docs/images/flowchart.png)
+<img src="docs/images/flowchart.png" alt="PathSeq flowchart" width = "482" height = "789" title = "PathSeq flowchart">
 
 
 1. **OPTIONAL** By default  the pipeline will attempt to trim adapters with Trimgalore: it will try to find the appropriate adapter automatically, unless adapters are specified on the command line with the associated parameters, but this can be turned off. 
