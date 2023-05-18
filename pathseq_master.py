@@ -295,7 +295,7 @@ samplesheet.to_csv(sampleOut, header = True, index_label = "sample", sep = ",")
 fasta = genome_dict[genome]["fasta"]
 gtf = genome_dict[genome]["gtf"]
 kraken_location = "%s/kraken_db/%s" % (awsdata["reference_bucket"], krakendb)
-kraken_ls = s3_check(kraken_location)
+kraken_ls = s3_check(kraken_location, s3)
 if kraken_ls is False:
 	print("Specified Kraken database not found in the reference bucket. First place the specified kraken index at %s") % kraken_location
 	sys.exit()
