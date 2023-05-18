@@ -297,7 +297,7 @@ gtf = genome_dict[genome]["gtf"]
 kraken_location = "%s/kraken_db/%s" % (awsdata["reference_bucket"], krakendb)
 kraken_ls = s3_check(kraken_location, s3)
 if kraken_ls is False:
-	print("Specified Kraken database not found in the reference bucket. First place the specified kraken index at %s") % kraken_location
+	print("Specified Kraken database not found in the reference bucket. First place the specified kraken index at %s" % kraken_location) 
 	sys.exit()
 
 cmd = ["nextflow run pathseq.nf \\" ,		
@@ -325,7 +325,7 @@ screen_create = "screen -dmS %s" % screen_session
 if dryrun is False:
 	print("Launching Nexflow...")
 	os.system(screen_create)
-	print("Launching Nextflow Path-seq run in screen session %s") % screen_session
+	print("Launching Nextflow Path-seq run in screen session %s" % screen_session) 
 	print("Check progress with 'screen -RD %s', and resume with CTRL+A followed by CTRL+D\n" % screen_session) 
 	screen_cmd = "screen -S %s -X stuff '%s\n'" % (screen_session, cmd_string)
 	os.system(screen_cmd)
