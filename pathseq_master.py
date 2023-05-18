@@ -65,10 +65,10 @@ aws_cred = "/home/%s/.aws/credentials" % usern
 
 if os.path.isfile(aws_cred):
 	prof = boto3.session.Session(profile_name = awsdata["aws_profile"])
-else
+else:
 	boto3.session.Session()
 
-	
+
 s3 = boto3.resource('s3', region_name= awsdata["aws_region"])
 
 
