@@ -2,7 +2,7 @@ process MULTIQC {
     tag "Generating MultiQC report"
     container 'quay.io/biocontainers/multiqc:1.14--pyhdfd78af_0'
 
-    memory 16.GB
+    memory '16 GB'
     cpus 4
   
     publishDir "$params.outdir", mode:'copy'

@@ -7,7 +7,7 @@ process FASTQC {
     container 'quay.io/biocontainers/fastqc:0.11.9--0'
 
     cpus 4
-    memory 32.GB
+    memory '32 GB'
     
     input:
     tuple val(meta), path(reads)

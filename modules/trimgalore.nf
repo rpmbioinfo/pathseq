@@ -3,6 +3,7 @@ process TRIMGALORE {
     container 'quay.io/biocontainers/trim-galore:0.6.10--hdfd78af_0'
 
     cpus 4
+    memory '32 GB'
 
     input:
     tuple val(meta), path(reads)

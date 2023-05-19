@@ -23,7 +23,7 @@ process GENOME_GENERATE {
     container 'quay.io/biocontainers/star:2.7.10b--h9ee0642_0'
 
     cpus 4 
-    memory 50.GB
+    memory '50 GB'
     
     input:
     path fasta
@@ -57,7 +57,7 @@ process STAR_ALIGN {
     container 'quay.io/biocontainers/star:2.7.10b--h9ee0642_0'
     
     cpus 4
-    memory 50.GB
+    memory '50 GB'
 
     publishDir "$params.outdir/star_logs", mode:'copy', pattern: "*.final.out"
 

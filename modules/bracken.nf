@@ -5,7 +5,7 @@ process BRACKEN_LEVEL {
 
     publishDir "$params.outdir/bracken/individual_reports", mode:'copy', pattern: "*.bracken"
     
-    memory 30.GB
+    memory '30 GB'
     cpus 4
 
 
